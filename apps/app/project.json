@@ -7,7 +7,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/app",
@@ -23,7 +23,11 @@
           }
         ],
         "styles": ["apps/app/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+
+        "customWebpackConfig": {
+          "path": "apps/app/webpack.config.ts"
+        }
       },
       "configurations": {
         "production": {
