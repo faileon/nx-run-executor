@@ -6,6 +6,9 @@
   "sourceRoot": "apps/app/src",
   "tags": [],
   "targets": {
+    "my-target": {
+      "executor": "@run-executor/my-plugin:my-executor"
+    },
     "build": {
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
